@@ -34,7 +34,7 @@ local TextLabel_2 = Instance.new("TextLabel")
 ScreenGui.Parent = game.CoreGui
 
 ImageLabel.Parent = ScreenGui
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255,255,255)
 ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
 ImageLabel.BorderSizePixel = 0
@@ -43,13 +43,13 @@ ImageLabel.Size = UDim2.new(0, 100, 0, 100)
 ImageLabel.Image = "http://www.roblox.com/asset/?id=15588591301"
 
 TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255,255,255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.422131121, 0, 0.446640313, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.GothamBold
-TextLabel.Text = "                                slapped ware Loaded."
-TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.Text = "                                HOMOXIDE Loaded."
+TextLabel.TextColor3 = Color3.fromRGB(104,71,141)
 TextLabel.TextSize = 20.000
 
 
@@ -59,8 +59,8 @@ TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.Position = UDim2.new(0.420765013, 0, 0.476943344, 0)
 TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
 TextLabel_2.Font = Enum.Font.GothamBold
-TextLabel_2.Text = "                                     This is a private script, Welcome "..game.Players.LocalPlayer.Name
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.Text = "                                     welcome to,HOMOXIDE  "..game.Players.LocalPlayer.Name
+TextLabel_2.TextColor3 = Color3.fromRGB(104,71,141)
 TextLabel_2.TextSize = 20.000
 
 
@@ -320,7 +320,7 @@ else
 end 
 
 
-local Slappedware = Instance.new("ScreenGui")
+local HOMOXIDE = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local UIGradient = Instance.new("UIGradient")
@@ -353,10 +353,10 @@ local close = Instance.new("TextButton")
 local UIGradient_3 = Instance.new("UIGradient")
 local UIGradient_4 = Instance.new("UIGradient")
 
-Slappedware.Name = "Slappedware"
-Slappedware.Parent = game.CoreGui
+HOMOXIDE.Name = "HOMOXIDE"
+HOMOXIDE.Parent = game.CoreGui
 
-Frame.Parent = Slappedware
+Frame.Parent = HOMOXIDE
 Frame.BackgroundColor3 = Color3.fromRGB(104,71,141)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.882424235, 0, 0.752753973, 0)
@@ -367,7 +367,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(104,71,141)
 TextLabel.BorderSizePixel = 0
 TextLabel.Size = UDim2.new(0, 191, 0, 18)
 TextLabel.Font = Enum.Font.Ubuntu
-TextLabel.Text = "Slappedware"
+TextLabel.Text = "HOMOXIDE"
 TextLabel.TextColor3 = Color3.fromRGB(255,0,0)
 TextLabel.TextSize = 14.000
 
@@ -464,7 +464,7 @@ fpslabel.TextScaled = true
 fpslabel.TextSize = 21.000
 fpslabel.TextWrapped = true
 
-Frame_2.Parent = Slappedware
+Frame_2.Parent = HOMOXIDE
 Frame_2.BackgroundColor3 = Color3.fromRGB(104,71,141)
 Frame_2.BackgroundTransparency = 1.000
 Frame_2.Position = UDim2.new(0.455151528, 0, 0.37943697, 0)
@@ -623,7 +623,7 @@ TextLabel_14.BorderSizePixel = 0
 TextLabel_14.Position = UDim2.new(-0.232432425, 0, -0.385650218, 0)
 TextLabel_14.Size = UDim2.new(0, 346, 0, 27)
 TextLabel_14.Font = Enum.Font.Ubuntu
-TextLabel_14.Text = "Slappedware Commands"
+TextLabel_14.Text = "HOMOXIDE Commands"
 TextLabel_14.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_14.TextSize = 14.000
 TextLabel_14.Visible = false
@@ -671,7 +671,7 @@ function makenotif(text)
     
     
         notification.Name = "notification"
-        notification.Parent = Slappedware
+        notification.Parent = HOMOXIDE
         notification.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
         notification.BorderSizePixel = 0
         notification.Position = UDim2.new(1.999, 0,0.535, 0)
@@ -687,7 +687,7 @@ function makenotif(text)
         title.Position = UDim2.new(0, 0, -0.179487184, 0)
         title.Size = UDim2.new(0, 229, 0, 14)
         title.Font = Enum.Font.Ubuntu
-        title.Text = "Slappedware"
+        title.Text = "HOMOXIDE"
         title.TextColor3 = Color3.fromRGB(0, 0, 0)
         title.TextSize = 14.000
     
@@ -1126,7 +1126,7 @@ end
 bar.Visible = false
 end)
 
-makenotif("Slappedware Loaded, Made By slapped")
+makenotif("HOMOXIDE Loaded, Made By slapped")
 
 local getc = game.Players.LocalPlayer.Backpack.Shotty:GetChildren()
 
@@ -1206,4 +1206,3 @@ RunService.RenderStepped:Connect(function()
         end
     end
 end)
-

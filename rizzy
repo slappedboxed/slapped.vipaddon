@@ -1,6 +1,6 @@
 
+-- a no effort universal script for shitty the streets "remakes" aka copy paste places using the leaked outdated ts code, script made by scartesu, ill find out if you have skidripped from this so you have been warned
 
---retarded ass fly
 local Target = nil
 local runservice = game:GetService("RunService")
 local uip = game:GetService("UserInputService")
@@ -178,7 +178,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Size = UDim2.new(0, 191, 0, 18)
 TextLabel.Font = Enum.Font.Ubuntu
 TextLabel.Text = "Slappedware"
-TextLabel.TextColor3 = Color3.fromRGB(104,71,141)
+TextLabel.TextColor3 = Color3.fromRGB(255,0,0)
 TextLabel.TextSize = 14.000
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(104,71,141)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(104,71,141))}
@@ -196,7 +196,7 @@ healthlabel.Position = UDim2.new(-0.0785340294, 0, 0.0891089141, 0)
 healthlabel.Size = UDim2.new(0, 102, 0, 23)
 healthlabel.Font = Enum.Font.Ubuntu
 healthlabel.Text = "Health: nil"
-healthlabel.TextColor3 = Color3.fromRGB(104,71,141)
+healthlabel.TextColor3 = Color3.fromRGB(255,0,0)
 healthlabel.TextScaled = true
 healthlabel.TextSize = 21.000
 healthlabel.TextWrapped = true
@@ -210,7 +210,7 @@ ammolabel.Position = UDim2.new(0.031413611, 0, 0.202970296, 0)
 ammolabel.Size = UDim2.new(0, 102, 0, 23)
 ammolabel.Font = Enum.Font.Ubuntu
 ammolabel.Text = "Ammo: nil"
-ammolabel.TextColor3 = Color3.fromRGB(104,71,141)
+ammolabel.TextColor3 = Color3.fromRGB(255,0,0)
 ammolabel.TextScaled = true
 ammolabel.TextSize = 21.000
 ammolabel.TextWrapped = true
@@ -227,7 +227,7 @@ targetlabel.Position = UDim2.new(0.031413611, 0, 0.202970296, 0)
 targetlabel.Size = UDim2.new(0, 102, 0, 23)
 targetlabel.Font = Enum.Font.Ubuntu
 targetlabel.Text = "Target: nil"
-targetlabel.TextColor3 = Color3.fromRGB(104,71,141)
+targetlabel.TextColor3 = Color3.fromRGB(255,0,0)
 targetlabel.TextScaled = true
 targetlabel.TextSize = 21.000
 targetlabel.TextWrapped = true
@@ -241,7 +241,7 @@ statuslabel.Position = UDim2.new(0.115183249, 0, 0.554455459, 0)
 statuslabel.Size = UDim2.new(0, 102, 0, 23)
 statuslabel.Font = Enum.Font.Ubuntu
 statuslabel.Text = "Status: inactive"
-statuslabel.TextColor3 = Color3.fromRGB(104,71,141)
+statuslabel.TextColor3 = Color3.fromRGB(255,0,0)
 statuslabel.TextScaled = true
 statuslabel.TextSize = 21.000
 statuslabel.TextWrapped = true
@@ -255,7 +255,7 @@ pinglabel.Position = UDim2.new(0.115183249, 0, 0.554455459, 0)
 pinglabel.Size = UDim2.new(0, 102, 0, 23)
 pinglabel.Font = Enum.Font.Ubuntu
 pinglabel.Text = "Ping: nil"
-pinglabel.TextColor3 = Color3.fromRGB(104,71,141)
+pinglabel.TextColor3 = Color3.fromRGB(255,0,0)
 pinglabel.TextScaled = true
 pinglabel.TextSize = 21.000
 pinglabel.TextWrapped = true
@@ -269,7 +269,7 @@ fpslabel.Position = UDim2.new(0.115183249, 0, 0.554455459, 0)
 fpslabel.Size = UDim2.new(0, 102, 0, 23)
 fpslabel.Font = Enum.Font.Ubuntu
 fpslabel.Text = "FPS: nil"
-fpslabel.TextColor3 = Color3.fromRGB(104,71,141)
+fpslabel.TextColor3 = Color3.fromRGB(255,0,0)
 fpslabel.TextScaled = true
 fpslabel.TextSize = 21.000
 fpslabel.TextWrapped = true
@@ -294,7 +294,7 @@ TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.Size = UDim2.new(0, 124, 0, 23)
 TextLabel_2.Font = Enum.Font.Ubuntu
 TextLabel_2.Text = "shoot [Target] / stopshoot"
-TextLabel_2.TextColor3 = Color3.fromRGB(104,71,141)
+TextLabel_2.TextColor3 = Color3.fromRGB(255,0,0)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14.000
 TextLabel_2.TextWrapped = true
@@ -512,7 +512,7 @@ function makenotif(text)
         message.Size = UDim2.new(0, 228, 0, 78)
         message.Font = Enum.Font.Ubuntu
         message.Text = text
-        message.TextColor3 = Color3.fromRGB(104,71,141)
+        message.TextColor3 = Color3.fromRGB(255,0,0)
         message.TextSize = 19.000
         message.TextWrapped = true
             
@@ -835,7 +835,7 @@ TextBox.Position = UDim2.new(0.0135135138, 0, 0, 0)
 TextBox.Size = UDim2.new(0, 219, 0, 25)
 TextBox.Font = Enum.Font.Ubuntu
 TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(104,71,141)
+TextBox.TextColor3 = Color3.fromRGB(255,0,0)
 TextBox.TextSize = 24.000
 TextBox.TextScaled = true
 uip.InputBegan:connect(function(keybind,chats)

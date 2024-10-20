@@ -1,5 +1,195 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Notification",
+    Text = "checking white list",
+    Icon = "http://www.roblox.com/asset/?id=1281286925",
+    Duration = 3
+    }
+)
 
--- a no effort universal script for shitty the streets "remakes" aka copy paste places using the leaked outdated ts code, script made by scartesu, ill find out if you have skidripped from this so you have been warned
+wait(2)
+
+
+
+
+
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Injecting...",
+    Text = "This Won't Take Long...",
+    Icon = "http://www.roblox.com/asset/?id=1281286925",
+    Duration = 2
+    }
+)
+
+wait(1)
+
+
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+
+ScreenGui.Parent = game.CoreGui
+
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.32650274, 0, 0.4334650937, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=15588591301"
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.422131121, 0, 0.446640313, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "                                slapped ware Loaded."
+TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.TextSize = 20.000
+
+
+TextLabel_2.Parent = ScreenGui
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.420765013, 0, 0.476943344, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "                                     This is a private script, Welcome "..game.Players.LocalPlayer.Name
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.TextSize = 20.000
+
+
+
+local blur = Instance.new('BlurEffect', game.Lighting)
+    blur.Size = 3
+TextLabel_2.TextStrokeTransparency = 1
+TextLabel.TextTransparency = 1
+TextLabel_2.TextTransparency = 1
+TextLabel.TextStrokeTransparency = 1
+ImageLabel.ImageTransparency = 1
+    wait(0.1)
+    blur.Size = 6
+TextLabel_2.TextStrokeTransparency = 0.9
+TextLabel.TextTransparency = 0.9
+TextLabel_2.TextTransparency = 0.9
+TextLabel.TextStrokeTransparency = 0.9
+ImageLabel.ImageTransparency = 0.9
+    wait(0.1)
+    blur.Size = 8
+TextLabel_2.TextStrokeTransparency = 0.8
+TextLabel.TextTransparency = 0.8
+TextLabel_2.TextTransparency = 0.8
+TextLabel.TextStrokeTransparency = 0.8
+ImageLabel.ImageTransparency = 0.8
+    wait(0.1)
+    blur.Size = 10
+TextLabel_2.TextStrokeTransparency = 0.7
+TextLabel.TextTransparency = 0.7
+TextLabel_2.TextTransparency = 0.7
+TextLabel.TextStrokeTransparency = 0.7
+ImageLabel.ImageTransparency = 0.7
+    wait(0.1)
+    blur.Size = 12
+TextLabel_2.TextStrokeTransparency = 0.6
+TextLabel.TextTransparency = 0.6
+TextLabel_2.TextTransparency = 0.6
+TextLabel.TextStrokeTransparency = 0.6
+ImageLabel.ImageTransparency = 0.6
+    wait(0.1)
+    blur.Size = 14
+    TextLabel_2.TextStrokeTransparency = 0.5
+TextLabel.TextTransparency = 0.5
+TextLabel_2.TextTransparency = 0.5
+TextLabel.TextStrokeTransparency = 0.5
+ImageLabel.ImageTransparency = 0.5
+    wait(0.1)
+    blur.Size = 15
+TextLabel_2.TextStrokeTransparency = 0.4
+TextLabel.TextTransparency = 0.4
+TextLabel_2.TextTransparency = 0.4
+TextLabel.TextStrokeTransparency = 0.4
+ImageLabel.ImageTransparency = 0.4
+    wait(0.1)
+    blur.Size = 16
+ TextLabel_2.TextStrokeTransparency = 0
+TextLabel.TextTransparency = 0
+TextLabel_2.TextTransparency = 0
+TextLabel.TextStrokeTransparency = 0
+ImageLabel.ImageTransparency = 0
+    wait(2.5)
+    game.Lighting.Blur:Destroy()
+    local blur = Instance.new('BlurEffect', game.Lighting)
+    blur.Size = 15
+     TextLabel_2.TextStrokeTransparency = 0.1
+TextLabel.TextTransparency = 0.1
+TextLabel_2.TextTransparency = 0.1
+TextLabel.TextStrokeTransparency = 0.1
+ImageLabel.ImageTransparency = 0.1
+    wait(0.1)
+        game.Lighting.Blur:Destroy()
+    local blur = Instance.new('BlurEffect', game.Lighting)
+    blur.Size = 14
+     TextLabel_2.TextStrokeTransparency = 0.2
+TextLabel.TextTransparency = 0.2
+TextLabel_2.TextTransparency = 0.2
+TextLabel.TextStrokeTransparency = 0.2
+ImageLabel.ImageTransparency = 0.2
+    wait(0.1)
+        game.Lighting.Blur:Destroy()
+    local blur = Instance.new('BlurEffect', game.Lighting)
+    blur.Size = 12
+     TextLabel_2.TextStrokeTransparency = 0.4
+TextLabel.TextTransparency = 0.4
+TextLabel_2.TextTransparency = 0.4
+TextLabel.TextStrokeTransparency = 0.4
+ImageLabel.ImageTransparency = 0.4
+    wait(0.1)
+        game.Lighting.Blur:Destroy()
+    local blur = Instance.new('BlurEffect', game.Lighting)
+    blur.Size = 10
+     TextLabel_2.TextStrokeTransparency = 0.5
+TextLabel.TextTransparency = 0.5
+TextLabel_2.TextTransparency = 0.5
+TextLabel.TextStrokeTransparency = 0.5
+ImageLabel.ImageTransparency = 0.5
+        wait(0.1)
+        game.Lighting.Blur:Destroy()
+    local blur = Instance.new('BlurEffect', game.Lighting)
+    blur.Size = 8
+     TextLabel_2.TextStrokeTransparency = 0.7
+TextLabel.TextTransparency = 0.7
+TextLabel_2.TextTransparency = 0.7
+TextLabel.TextStrokeTransparency = 0.7
+ImageLabel.ImageTransparency = 0.7
+        wait(0.1)
+        game.Lighting.Blur:Destroy()
+    local blur = Instance.new('BlurEffect', game.Lighting)
+    blur.Size = 6 
+     TextLabel_2.TextStrokeTransparency = 0.8
+TextLabel.TextTransparency = 0.8
+TextLabel_2.TextTransparency = 0.8
+TextLabel.TextStrokeTransparency = 0.8
+ImageLabel.ImageTransparency = 0.8
+        wait(0.1)
+        game.Lighting.Blur:Destroy()
+    local blur = Instance.new('BlurEffect', game.Lighting)
+    blur.Size = 3
+     TextLabel_2.TextStrokeTransparency = 1
+TextLabel.TextTransparency = 1
+TextLabel_2.TextTransparency = 1
+TextLabel.TextStrokeTransparency = 1
+ImageLabel.ImageTransparency = 1
+        wait(0.1)
+        game.Lighting.Blur:Destroy()
+        wait(0.5)
+
+
+-----made by slapped the goat fr fr
 
 local Target = nil
 local runservice = game:GetService("RunService")
@@ -937,3 +1127,83 @@ bar.Visible = false
 end)
 
 makenotif("Slappedware Loaded, Made By slapped")
+
+local getc = game.Players.LocalPlayer.Backpack.Shotty:GetChildren()
+
+    for i,v in pairs (getc) do
+        if v.Name == "Union" then
+            v.UsePartColor = true 
+            wait()
+            v.Material = "Neon"
+            v.Color = Color3.fromRGB(200,0,0)
+            v.Transparency = 0.7
+        end
+    end
+local getc = game.Players.LocalPlayer.Backpack.Glock:GetChildren()
+
+    for i,v in pairs (getc) do
+        if v.Name == "Union" then
+            v.UsePartColor = true 
+            wait()
+            v.Material = "Neon"
+            v.Color = Color3.fromRGB(200,0,0)
+            v.Transparency = 0.7
+        end
+    end
+local getc = game.Players.LocalPlayer.Backpack.Glock:GetChildren()
+
+    for i,v in pairs (getc) do
+        if v.Name == "Handle" then
+            v.UsePartColor = true 
+            wait()
+            v.Material = "Neon"
+            v.Color = Color3.fromRGB(200,0,0)
+            v.Transparency = 0.7
+        end
+    end
+local getc = game.Players.LocalPlayer.Backpack.Glock:GetChildren()
+
+    for i,v in pairs (getc) do
+        if v.Name == "Heh" then
+            v.UsePartColor = true 
+            wait()
+            v.Material = "Neon"
+            v.Color = Color3.fromRGB(200,0,0)
+            v.Transparency = 0.7
+        end
+    end
+
+
+
+
+local lighting = game.Lighting
+local sunray = Instance.new("SunRaysEffect", lighting)
+local sky = lighting.Sky
+sky.SkyboxBk = "rbxassetid://653719502"
+sky.SkyboxDn = "rbxassetid://653718790"
+sky.SkyboxFt = "rbxassetid://653719067"
+sky.SkyboxLf = "rbxassetid://653719190"
+sky.SkyboxRt = "rbxassetid://653718931"
+sky.SkyboxUp = "rbxassetid://653719321"
+sky.StarCount = 1334
+sky.SunAngularSize = 21
+sky.MoonAngularSize = 11
+--print("4K Sky Has Been Applied!")
+local RunService = game:GetService("RunService")
+RunService.RenderStepped:Connect(function()
+    if game.Players.LocalPlayer.Character.Humanoid then
+        if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+            if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+                end
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(100, 255, 255),Color3.fromRGB(210, 255, 255))
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+                end
+            end
+        end
+    end
+end)
+

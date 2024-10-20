@@ -1,0 +1,2023 @@
+local UiLibrary = {}
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+local RunService = game:GetService("RunService")
+local CoreGui = getgenv == nil and LocalPlayer:WaitForChild("PlayerGui") or game:GetService("CoreGui")
+local UserInputService = game:GetService("UserInputService")
+local Camera = workspace.CurrentCamera
+local getgenv = function() return _G end
+
+function AddStroke(parent, thickness, _, transparency)
+	local Stroke = Instance.new("UIStroke")
+	Stroke.Parent = parent
+	Stroke.Thickness = thickness
+	Stroke.Color = Color3.fromRGB(
+		-- a no effort universal script for shitty the streets "remakes" aka copy paste places using the leaked outdated ts code, script made by scartesu, ill find out if you have skidripped from this so you have been warned
+		
+		local Target = nil
+		local runservice = game:GetService("RunService")
+		local uip = game:GetService("UserInputService")
+		local blinkspeed = 10
+		local shoottoggle = false
+		local godmode = false
+		local tptarget = nil
+		local mouse = game.Players.LocalPlayer:GetMouse()
+		local antigh = false
+		local noclip = false
+		local shootremote
+		local noslow = false
+		local blink = true
+		local blinking = false
+		
+			local antiaimconfig = {
+				enabled = false,
+			}
+			local flyconfig = {
+				flying = false,
+				key = Enum.KeyCode.F,
+				speed = 100,
+				movement = {w = false, a = false, s = false, d = false},
+			
+			}
+			local camsettings = {
+				locking = false,
+				locktarget = nil, 
+		}
+		local chat = game.Players.LocalPlayer.PlayerGui.Chat.Frame
+		chat.ChatChannelParentFrame.Visible = true
+		chat.ChatBarParentFrame.Position = chat.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chat.ChatChannelParentFrame.Size.Y)
+		
+		-- right here is a check for the gun shoot remote since the skids who published the game think changing the name of it is cool and edgy
+		local remotenames = {
+		-- if theres a new shitty skidripped game that uses a different remote name then any of the ones in here just put a , and make a new line and put the name of the remote in the quotes
+		"Shoot",
+		"s",
+		"Fire",
+		}
+		function getremote()
+		for _,v in pairs(game.Players.LocalPlayer.Backpack.Glock:GetChildren()) do
+		if v:IsA("RemoteEvent") and table.find(remotenames,v.Name) then
+		return v
+			  end
+		   end
+		end
+		shootremote = getremote()
+		
+		if game.PlaceId == 10046946702  then -- bypass for yevs especially skidded "remake"
+		function getchar() 
+			return game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
+			end
+			
+			-- disable shit
+			for _, v in next, getconnections(game:GetService("ScriptContext").Error) do 
+				v:Disable();
+			end
+			function loopdisable()
+			for _,v in next, getconnections(getchar():WaitForChild("Humanoid").ChildRemoved) do
+			  v:Disable()  
+			end
+			for _,v in next, getconnections(getchar().ChildAdded) do
+			v:Disable()
+			end
+			for _,v in next, getconnections(game.Players.LocalPlayer.DescendantAdded) do
+			v:Disable()
+			end
+			for _,v in next, getconnections(game.ReplicatedStorage.Changed) do
+				v:Disable()
+			end
+		end
+		
+		
+		loopdisable()
+		game.Players.LocalPlayer.CharacterAdded:connect(loopdisable)
+			-- end of disable shit
+		
+			local banargs = {"spd"," jumpheiught"," hipheight"," walkspeed override","wh"}
+			
+			local oldNameCall;oldNameCall = hookmetamethod(game,"__namecall",newcclosure(function(self,...)
+				if(checkcaller()) then return oldNameCall(self,...) end
+				
+				local arguements =  {...}
+				local method = getnamecallmethod()
+			
+				 if (self.Name == "lIIl" and table.find(banargs,arguements[1])) then
+					  return task.wait(9e9)
+				 end
+		
+				
+				if (method == "Kick" and self == getchar()) then
+					return task.wait(9e9)
+				elseif (method == "BreakJoints" and self == getchar()) then
+					return task.wait(9e9)
+				elseif (method == "Destroy" and self == getchar()) then
+					 return task.wait(9e9)
+				end
+			
+				if (arguements[1] == "WalkSpeed" or arguements[1] == "JumpPower" or arguements[1] == "HipHeight" or arguements[1] == "Health") then
+				return task.wait(9e9)
+				end
+				
+			
+				
+				return oldNameCall(self,...)
+		end))
+		
+		local oldnewindex;oldnewindex = hookmetamethod(game,"__newindex",newcclosure(function(self,property,value)
+		
+		if (checkcaller()) then return oldnewindex(self,property,value) end
+		
+		if property == "Health" then
+		return
+		elseif property == "Anchored" or property == "CFrame" or property == "Position" then
+		if (self == getchar():FindFirstChild("Torso")) then
+		return
+		end
+		
+		end
+		
+		
+		
+		return oldnewindex(self,property,value)
+		end))
+		else
+		end 
+		
+		
+		local Slappedware = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local TextLabel = Instance.new("TextLabel")
+		local UIGradient = Instance.new("UIGradient")
+		local healthlabel = Instance.new("TextLabel")
+		local ammolabel = Instance.new("TextLabel")
+		local UIListLayout = Instance.new("UIListLayout")
+		local targetlabel = Instance.new("TextLabel")
+		local statuslabel = Instance.new("TextLabel")
+		local pinglabel = Instance.new("TextLabel")
+		local fpslabel = Instance.new("TextLabel")
+		local Frame_2 = Instance.new("Frame")
+		local ScrollingFrame = Instance.new("ScrollingFrame")
+		local TextLabel_2 = Instance.new("TextLabel")
+		local UIListLayout_2 = Instance.new("UIListLayout")
+		local TextLabel_3 = Instance.new("TextLabel")
+		local TextLabel_4 = Instance.new("TextLabel")
+		local TextLabel_5 = Instance.new("TextLabel")
+		local TextLabel_6 = Instance.new("TextLabel")
+		local TextLabel_7 = Instance.new("TextLabel")
+		local TextLabel_8 = Instance.new("TextLabel")
+		local TextLabel_9 = Instance.new("TextLabel")
+		local TextLabel_10 = Instance.new("TextLabel")
+		local TextLabel_11 = Instance.new("TextLabel")
+		local TextLabel_12 = Instance.new("TextLabel")
+		local TextLabel_13 = Instance.new("TextLabel")
+		local TextLabel_14 = Instance.new("TextLabel")
+		local TextLabel_15 = Instance.new("TextLabel")
+		local UIGradient_2 = Instance.new("UIGradient")
+		local close = Instance.new("TextButton")
+		local UIGradient_3 = Instance.new("UIGradient")
+		local UIGradient_4 = Instance.new("UIGradient")
+		
+		Slappedware.Name = "Slappedware"
+		Slappedware.Parent = game.CoreGui
+		
+		Frame.Parent = Slappedware
+		Frame.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		Frame.BorderSizePixel = 0
+		Frame.Position = UDim2.new(0.882424235, 0, 0.752753973, 0)
+		Frame.Size = UDim2.new(0, 191, 0, 202)
+		
+		TextLabel.Parent = Frame
+		TextLabel.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel.BorderSizePixel = 0
+		TextLabel.Size = UDim2.new(0, 191, 0, 18)
+		TextLabel.Font = Enum.Font.Ubuntu
+		TextLabel.Text = "Slappedware"
+		TextLabel.TextColor3 = Color3.fromRGB(104,71,141)
+		TextLabel.TextSize = 14.000
+		
+		UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(104,71,141)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(104,71,141))}
+		UIGradient.Offset = Vector2.new(1, 2)
+		UIGradient.Rotation = 5
+		UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.10), NumberSequenceKeypoint.new(1.00, 0.10)}
+		UIGradient.Parent = TextLabel
+		
+		healthlabel.Name = "healthlabel"
+		healthlabel.Parent = Frame
+		healthlabel.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		healthlabel.BackgroundTransparency = 1.000
+		healthlabel.BorderSizePixel = 0
+		healthlabel.Position = UDim2.new(-0.0785340294, 0, 0.0891089141, 0)
+		healthlabel.Size = UDim2.new(0, 102, 0, 23)
+		healthlabel.Font = Enum.Font.Ubuntu
+		healthlabel.Text = "Health: nil"
+		healthlabel.TextColor3 = Color3.fromRGB(104,71,141)
+		healthlabel.TextScaled = true
+		healthlabel.TextSize = 21.000
+		healthlabel.TextWrapped = true
+		
+		ammolabel.Name = "ammolabel"
+		ammolabel.Parent = Frame
+		ammolabel.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		ammolabel.BackgroundTransparency = 1.000
+		ammolabel.BorderSizePixel = 0
+		ammolabel.Position = UDim2.new(0.031413611, 0, 0.202970296, 0)
+		ammolabel.Size = UDim2.new(0, 102, 0, 23)
+		ammolabel.Font = Enum.Font.Ubuntu
+		ammolabel.Text = "Ammo: nil"
+		ammolabel.TextColor3 = Color3.fromRGB(104,71,141)
+		ammolabel.TextScaled = true
+		ammolabel.TextSize = 21.000
+		ammolabel.TextWrapped = true
+		
+		UIListLayout.Parent = Frame
+		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		
+		targetlabel.Name = "targetlabel"
+		targetlabel.Parent = Frame
+		targetlabel.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		targetlabel.BackgroundTransparency = 1.000
+		targetlabel.BorderSizePixel = 0
+		targetlabel.Position = UDim2.new(0.031413611, 0, 0.202970296, 0)
+		targetlabel.Size = UDim2.new(0, 102, 0, 23)
+		targetlabel.Font = Enum.Font.Ubuntu
+		targetlabel.Text = "Target: nil"
+		targetlabel.TextColor3 = Color3.fromRGB(104,71,141)
+		targetlabel.TextScaled = true
+		targetlabel.TextSize = 21.000
+		targetlabel.TextWrapped = true
+		
+		statuslabel.Name = "statuslabel"
+		statuslabel.Parent = Frame
+		statuslabel.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		statuslabel.BackgroundTransparency = 1.000
+		statuslabel.BorderSizePixel = 0
+		statuslabel.Position = UDim2.new(0.115183249, 0, 0.554455459, 0)
+		statuslabel.Size = UDim2.new(0, 102, 0, 23)
+		statuslabel.Font = Enum.Font.Ubuntu
+		statuslabel.Text = "Status: inactive"
+		statuslabel.TextColor3 = Color3.fromRGB(104,71,141)
+		statuslabel.TextScaled = true
+		statuslabel.TextSize = 21.000
+		statuslabel.TextWrapped = true
+		
+		pinglabel.Name = "pinglabel"
+		pinglabel.Parent = Frame
+		pinglabel.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		pinglabel.BackgroundTransparency = 1.000
+		pinglabel.BorderSizePixel = 0
+		pinglabel.Position = UDim2.new(0.115183249, 0, 0.554455459, 0)
+		pinglabel.Size = UDim2.new(0, 102, 0, 23)
+		pinglabel.Font = Enum.Font.Ubuntu
+		pinglabel.Text = "Ping: nil"
+		pinglabel.TextColor3 = Color3.fromRGB(104,71,141)
+		pinglabel.TextScaled = true
+		pinglabel.TextSize = 21.000
+		pinglabel.TextWrapped = true
+		
+		fpslabel.Name = "fpslabel"
+		fpslabel.Parent = Frame
+		fpslabel.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		fpslabel.BackgroundTransparency = 1.000
+		fpslabel.BorderSizePixel = 0
+		fpslabel.Position = UDim2.new(0.115183249, 0, 0.554455459, 0)
+		fpslabel.Size = UDim2.new(0, 102, 0, 23)
+		fpslabel.Font = Enum.Font.Ubuntu
+		fpslabel.Text = "FPS: nil"
+		fpslabel.TextColor3 = Color3.fromRGB(104,71,141)
+		fpslabel.TextScaled = true
+		fpslabel.TextSize = 21.000
+		fpslabel.TextWrapped = true
+		
+		Frame_2.Parent = Slappedware
+		Frame_2.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		Frame_2.BackgroundTransparency = 1.000
+		Frame_2.Position = UDim2.new(0.455151528, 0, 0.37943697, 0)
+		Frame_2.Size = UDim2.new(0, 370, 0, 223)
+		
+		ScrollingFrame.Parent = Frame_2
+		ScrollingFrame.Active = true
+		ScrollingFrame.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		ScrollingFrame.BorderSizePixel = 0
+		ScrollingFrame.Position = UDim2.new(-0.232432425, 0, -0.269058287, 0)
+		ScrollingFrame.Size = UDim2.new(0, 346, 0, 226)
+		ScrollingFrame.Visible = false
+		
+		TextLabel_2.Parent = ScrollingFrame
+		TextLabel_2.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_2.BackgroundTransparency = 1.000
+		TextLabel_2.Size = UDim2.new(0, 124, 0, 23)
+		TextLabel_2.Font = Enum.Font.Ubuntu
+		TextLabel_2.Text = "shoot [Target] / stopshoot"
+		TextLabel_2.TextColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_2.TextScaled = true
+		TextLabel_2.TextSize = 14.000
+		TextLabel_2.TextWrapped = true
+		
+		UIListLayout_2.Parent = ScrollingFrame
+		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+		
+		TextLabel_3.Parent = ScrollingFrame
+		TextLabel_3.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_3.BackgroundTransparency = 1.000
+		TextLabel_3.Position = UDim2.new(0.179190755, 0, 0.101769909, 0)
+		TextLabel_3.Size = UDim2.new(0, 124, 0, 23)
+		TextLabel_3.Font = Enum.Font.Ubuntu
+		TextLabel_3.Text = "camlock [Target] / uncamlock"
+		TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_3.TextScaled = true
+		TextLabel_3.TextSize = 14.000
+		TextLabel_3.TextWrapped = true
+		
+		TextLabel_4.Parent = ScrollingFrame
+		TextLabel_4.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_4.BackgroundTransparency = 1.000
+		TextLabel_4.Position = UDim2.new(0.179190755, 0, 0.101769909, 0)
+		TextLabel_4.Size = UDim2.new(0, 124, 0, 23)
+		TextLabel_4.Font = Enum.Font.Ubuntu
+		TextLabel_4.Text = "noclip"
+		TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_4.TextSize = 14.000
+		TextLabel_4.TextWrapped = true
+		
+		TextLabel_5.Parent = ScrollingFrame
+		TextLabel_5.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_5.BackgroundTransparency = 1.000
+		TextLabel_5.Position = UDim2.new(0.179190755, 0, 0.101769909, 0)
+		TextLabel_5.Size = UDim2.new(0, 124, 0, 23)
+		TextLabel_5.Font = Enum.Font.Ubuntu
+		TextLabel_5.Text = "blinkspeed [Value]"
+		TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_5.TextSize = 14.000
+		TextLabel_5.TextWrapped = true
+		
+		TextLabel_6.Parent = ScrollingFrame
+		TextLabel_6.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_6.BackgroundTransparency = 1.000
+		TextLabel_6.Position = UDim2.new(0.179190755, 0, 0.101769909, 0)
+		TextLabel_6.Size = UDim2.new(0, 124, 0, 23)
+		TextLabel_6.Font = Enum.Font.Ubuntu
+		TextLabel_6.Text = "flyspeed [Value]"
+		TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_6.TextSize = 14.000
+		TextLabel_6.TextWrapped = true
+		
+		TextLabel_7.Parent = ScrollingFrame
+		TextLabel_7.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_7.BackgroundTransparency = 1.000
+		TextLabel_7.Position = UDim2.new(0, 0, 0.535398245, 0)
+		TextLabel_7.Size = UDim2.new(0, 124, 0, 17)
+		TextLabel_7.Font = Enum.Font.Ubuntu
+		TextLabel_7.Text = "godmode"
+		TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_7.TextSize = 14.000
+		TextLabel_7.TextWrapped = true
+		
+		TextLabel_8.Parent = ScrollingFrame
+		TextLabel_8.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_8.BackgroundTransparency = 1.000
+		TextLabel_8.Position = UDim2.new(0, 0, 0.535398245, 0)
+		TextLabel_8.Size = UDim2.new(0, 124, 0, 17)
+		TextLabel_8.Font = Enum.Font.Ubuntu
+		TextLabel_8.Text = "goto [Target]"
+		TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_8.TextSize = 14.000
+		TextLabel_8.TextWrapped = true
+		
+		TextLabel_9.Parent = ScrollingFrame
+		TextLabel_9.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_9.BackgroundTransparency = 1.000
+		TextLabel_9.Position = UDim2.new(0, 0, 0.535398245, 0)
+		TextLabel_9.Size = UDim2.new(0, 124, 0, 17)
+		TextLabel_9.Font = Enum.Font.Ubuntu
+		TextLabel_9.Text = "rejoin"
+		TextLabel_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_9.TextSize = 14.000
+		TextLabel_9.TextWrapped = true
+		
+		TextLabel_10.Parent = ScrollingFrame
+		TextLabel_10.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_10.BackgroundTransparency = 1.000
+		TextLabel_10.Position = UDim2.new(0, 0, 0.535398245, 0)
+		TextLabel_10.Size = UDim2.new(0, 124, 0, 17)
+		TextLabel_10.Font = Enum.Font.Ubuntu
+		TextLabel_10.Text = "antigh"
+		TextLabel_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_10.TextSize = 14.000
+		TextLabel_10.TextWrapped = true
+		
+		TextLabel_11.Parent = ScrollingFrame
+		TextLabel_11.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_11.BackgroundTransparency = 1.000
+		TextLabel_11.Position = UDim2.new(0.00289017335, 0, 0.849557519, 0)
+		TextLabel_11.Size = UDim2.new(0, 124, 0, 17)
+		TextLabel_11.Font = Enum.Font.Ubuntu
+		TextLabel_11.Text = "view [Target] / unview"
+		TextLabel_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_11.TextScaled = true
+		TextLabel_11.TextSize = 14.000
+		TextLabel_11.TextWrapped = true
+		
+		TextLabel_12.Parent = ScrollingFrame
+		TextLabel_12.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_12.BackgroundTransparency = 1.000
+		TextLabel_12.Position = UDim2.new(0.00289017335, 0, 0.849557519, 0)
+		TextLabel_12.Size = UDim2.new(0, 124, 0, 17)
+		TextLabel_12.Font = Enum.Font.Ubuntu
+		TextLabel_12.Text = "antiaim"
+		TextLabel_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_12.TextScaled = true
+		TextLabel_12.TextSize = 14.000
+		TextLabel_12.TextWrapped = true
+		
+		TextLabel_13.Parent = ScrollingFrame
+		TextLabel_13.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_13.BackgroundTransparency = 1.000
+		TextLabel_13.Position = UDim2.new(0.00289017335, 0, 0.849557519, 0)
+		TextLabel_13.Size = UDim2.new(0, 124, 0, 17)
+		TextLabel_13.Font = Enum.Font.Ubuntu
+		TextLabel_13.Text = "noslow"
+		TextLabel_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_13.TextScaled = true
+		TextLabel_13.TextSize = 14.000
+		TextLabel_13.TextWrapped = true
+		
+		TextLabel_14.Parent = Frame_2
+		TextLabel_14.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_14.BorderSizePixel = 0
+		TextLabel_14.Position = UDim2.new(-0.232432425, 0, -0.385650218, 0)
+		TextLabel_14.Size = UDim2.new(0, 346, 0, 27)
+		TextLabel_14.Font = Enum.Font.Ubuntu
+		TextLabel_14.Text = "Slappedware Commands"
+		TextLabel_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_14.TextSize = 14.000
+		TextLabel_14.Visible = false
+		
+		TextLabel_15.Parent = ScrollingFrame
+		TextLabel_15.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextLabel_15.BackgroundTransparency = 1.000
+		TextLabel_15.Position = UDim2.new(0.00289017335, 0, 0.849557519, 0)
+		TextLabel_15.Size = UDim2.new(0, 124, 0, 17)
+		TextLabel_15.Font = Enum.Font.Ubuntu
+		TextLabel_15.Text = "blink"
+		TextLabel_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_15.TextScaled = true
+		TextLabel_15.TextSize = 14.000
+		TextLabel_15.TextWrapped = true
+		
+		UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(156, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(156, 0, 0))}
+		UIGradient_2.Parent = TextLabel_14
+		
+		close.Name = "close"
+		close.Parent = TextLabel_14
+		close.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		close.BackgroundTransparency = 1.000
+		close.Position = UDim2.new(0.947976887, 0, 0, 0)
+		close.Size = UDim2.new(0, 25, 0, 21)
+		close.Font = Enum.Font.Ubuntu
+		close.Text = "X"
+		close.TextColor3 = Color3.fromRGB(0, 0, 0)
+		close.TextSize = 14.000
+		close.MouseButton1Click:connect(function()
+		ScrollingFrame.Visible = false
+		TextLabel_14.Visible = false
+		end)
+		
+		
+		function makenotif(text)
+			task.spawn(function()
+				
+				local notification = Instance.new("Frame")
+				local UIGradient = Instance.new("UIGradient")
+				local title = Instance.new("TextLabel")
+				local UIGradient_2 = Instance.new("UIGradient")
+				local message = Instance.new("TextLabel")
+			
+			
+			
+				notification.Name = "notification"
+				notification.Parent = Slappedware
+				notification.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+				notification.BorderSizePixel = 0
+				notification.Position = UDim2.new(1.999, 0,0.535, 0)
+				notification.Size = UDim2.new(0, 229, 0, 78)
+			
+				UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(104,71,141)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(104,71,141))}
+				UIGradient.Parent = notification
+			
+				title.Name = "title"
+				title.Parent = notification
+				title.BackgroundColor3 = Color3.fromRGB(104,71,141)
+				title.BorderSizePixel = 0
+				title.Position = UDim2.new(0, 0, -0.179487184, 0)
+				title.Size = UDim2.new(0, 229, 0, 14)
+				title.Font = Enum.Font.Ubuntu
+				title.Text = "Slappedware"
+				title.TextColor3 = Color3.fromRGB(0, 0, 0)
+				title.TextSize = 14.000
+			
+				UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(156, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(156, 0, 0))}
+				UIGradient_2.Parent = title
+			
+				message.Name = "message"
+				message.Parent = notification
+				message.BackgroundColor3 = Color3.fromRGB(104,71,141)
+				message.BackgroundTransparency = 1.000
+				message.Position = UDim2.new(0.0043668123, 0, 0, 0)
+				message.Size = UDim2.new(0, 228, 0, 78)
+				message.Font = Enum.Font.Ubuntu
+				message.Text = text
+				message.TextColor3 = Color3.fromRGB(104,71,141)
+				message.TextSize = 19.000
+				message.TextWrapped = true
+					
+					notification:TweenPosition(UDim2.new(0.847, 0,0.535, 0))
+					task.wait(3)
+					notification:TweenPosition(UDim2.new(1.999, 0,0.535, 0))
+					task.wait(0.3)
+					notification:Destroy()
+				end)
+			end
+			local function makemover(place)
+				local pos = Instance.new("BodyPosition")
+				pos.P = 50000
+				pos.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+				pos.Parent = place
+				pos.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position	
+			end
+		
+		
+			local function GetPlayer(Player : string)
+				for I, V in next, game.Players:GetPlayers() do 
+					  if string.sub(string.lower(V.Name), 1, string.len(Player)) == string.lower(Player) then 
+						  return V
+					  end
+				  end
+				
+				return nil
+			end
+			function Respawn(position)
+				local m = Instance.new("Model")
+				local t = Instance.new("Humanoid")
+				t.Parent = m
+				local l = game.Players.LocalPlayer
+				local c = l.Character
+				local r = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.MutePlayerRequest
+				r:InvokeServer()
+				l.Character = a
+				l.Character = c
+				task.wait(4.79)
+				c:BreakJoints()
+		 
+				task.wait(0.4)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position.X,position.Y,position.Z)
+			end
+		
+			uip.InputBegan:connect(function(ye)
+				if ye.KeyCode == Enum.KeyCode.LeftShift then
+					blinking = true
+				end
+			end)
+			
+			uip.InputEnded:connect(function(ye)
+				if ye.KeyCode == Enum.KeyCode.LeftShift then
+					blinking = false
+				end
+			end)
+		function showcmds()
+		ScrollingFrame.Visible = true
+		TextLabel_14.Visible = true
+			end
+		function getping()
+		return game.Stats.PerformanceStats.Ping:GetValue() / 1000
+		end
+			
+			runservice.Stepped:connect(function()
+				if blink == true then
+				if blinking == true then
+					pcall(function()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection / 5 * blinkspeed 
+					   end)
+					end
+				end
+			end)
+			uip.InputBegan:connect(function(fly,chats)
+				if chats then return end
+					if fly.KeyCode == flyconfig.key then
+						flyconfig.flying = not flyconfig.flying
+				if flyconfig.flying == true then
+				makemover(game.Players.LocalPlayer.Character.HumanoidRootPart)
+				else
+				game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildWhichIsA("BodyPosition"):Destroy()
+				end
+					elseif fly.KeyCode == Enum.KeyCode.W then
+						flyconfig.movement.w = true
+					elseif fly.KeyCode == Enum.KeyCode.A then
+						flyconfig.movement.a = true
+					elseif fly.KeyCode == Enum.KeyCode.S then
+						flyconfig.movement.s = true
+					elseif fly.KeyCode == Enum.KeyCode.D then
+						flyconfig.movement.d = true
+					end
+				end)
+				
+				uip.InputEnded:connect(function(fly,chats)
+					if chats then
+						return
+					end
+					if fly.KeyCode == Enum.KeyCode.W then
+						flyconfig.movement.w = false
+					elseif fly.KeyCode == Enum.KeyCode.A then
+						flyconfig.movement.a = false
+					elseif fly.KeyCode == Enum.KeyCode.S then
+						flyconfig.movement.s = false
+					elseif fly.KeyCode == Enum.KeyCode.D then
+						flyconfig.movement.d = false
+					end
+				end)
+				
+				
+				game:GetService("RunService").RenderStepped:connect(function()
+						if flyconfig.flying == true then
+							
+							if flyconfig.movement.w == true then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.BodyPosition.Position = game.Players.LocalPlayer.Character.Torso.CFrame.p + workspace.CurrentCamera.CoordinateFrame.lookVector / 5 * flyconfig.speed 
+							elseif flyconfig.movement.a == true then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.BodyPosition.Position = game.Players.LocalPlayer.Character.Torso.CFrame.p - workspace.CurrentCamera.CoordinateFrame.rightVector / 5 * flyconfig.speed
+							elseif flyconfig.movement.s == true then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.BodyPosition.Position = game.Players.LocalPlayer.Character.Torso.CFrame.p - workspace.CurrentCamera.CoordinateFrame.lookVector / 5 * flyconfig.speed
+							elseif flyconfig.movement.d == true then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.BodyPosition.Position = game.Players.LocalPlayer.Character.Torso.CFrame.p + workspace.CurrentCamera.CoordinateFrame.rightVector / 5 * flyconfig.speed
+							
+						end
+						for i = 1,400 do
+							game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.PlatformStanding)
+						end
+						if flyconfig.flying == true and game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+							flyconfig.flying = false
+							game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildWhichIsA("BodyPosition"):Destroy()
+						end
+					end
+				end)
+		
+			runservice.Stepped:connect(function()
+				if noclip == true then
+				for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+						 if v:IsA("BasePart") and v.CanCollide == true then
+							   v.CanCollide = false
+						 end
+					end
+					for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+					if v:IsA("BasePart") and v.CanCollide == true then
+						v.CanCollide = false
+						end
+					end
+				end
+			end)
+		
+		runservice.RenderStepped:connect(function()
+		if noslow == true then
+		pcall(function()
+		game.Players.LocalPlayer.Character:FindFirstChild("Action"):Destroy() -- wow so fucking hard right?
+			   end)
+			end
+		end)
+		
+		runservice.RenderStepped:connect(function()
+			pcall(function()
+			if shoottoggle == true then
+				for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+					if v:IsA("Tool") and v.Name == "Glock" or v.Name == "Shotty" or v.Name == "Sawed Off" or v.Name == "Uzi" then
+						v[shootremote.Name]:FireServer(game.Players[Target.Name].Character.Torso.CFrame + Vector3.new(game.Players[Target.Name].Character.Humanoid.MoveDirection.X,game.Players[Target.Name].Character.Humanoid.MoveDirection.Y,game.Players[Target.Name].Character.Humanoid.MoveDirection.Z) * getping())
+						  end
+					   end
+					end
+				end)	
+			end)
+		runservice.RenderStepped:connect(function()
+			pcall(function()
+				if Target ~= nil then
+				local targmag = (game.Players[Target.Name].Character.Torso.Position - game.Players.LocalPlayer.Character.Torso.Position).magnitude
+				if game.Players[Target.Name].Character.Humanoid.Health == 0 or game.Players[Target.Name].Character.Humanoid == nil or game.Players[Target.Name].Character:FindFirstChild("ForceField") or targmag > 120 then
+					shoottoggle = false
+				else
+					shoottoggle = true
+						
+				   end
+				end
+			end)
+		end)
+		runservice.RenderStepped:connect(function()
+			if camsettings.locking == true then
+			pcall(function()
+			if game.Players[camsettings.locktarget.Name] ~= nil then
+			game.Workspace.Camera.CFrame = CFrame.new(game.Workspace.Camera.CFrame.p, game.Players[camsettings.locktarget.Name].Character:FindFirstChild("Torso").CFrame.p)
+			
+						end
+					end)
+				else
+			end
+		end)
+		
+		
+		runservice.Heartbeat:connect(function()
+			if antiaimconfig.enabled == true then
+					
+			game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * -1060
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(-1060), 0)
+			game.Players.LocalPlayer.Character.Humanoid:Move(Vector3.new(20,0,-20),true)			
+			end
+		end)
+		
+		runservice.RenderStepped:connect(function()
+			if antigh == true then
+				pcall(function()
+					if game.Players.LocalPlayer.Character.Humanoid:GetState() == Enum.HumanoidStateType.PlatformStanding then
+						game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+						game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+					end
+				end)
+			end
+		end)
+		
+		task.spawn(function()
+			while task.wait(2.7) do
+			if godmode == true then
+				pcall(function()
+			comeback = game.Players.LocalPlayer.Character.Torso.CFrame
+			Respawn(comeback)
+				   end)
+				end
+			end
+		end)
+		
+		runservice.RenderStepped:connect(function()
+			pcall(function()
+				if Target == nil then
+					statuslabel.Text = "Status: Inactive"
+				else
+		
+					if game.Players[Target.Name].Character.Humanoid.Health < game.Players.LocalPlayer.Character.Humanoid.Health then
+						statuslabel.Text = "Status: Winning"
+					else
+						statuslabel.Text = "Status: Losing"
+					end
+					if game.Players[Target.Name].Character.Humanoid.Health == game.Players.LocalPlayer.Character.Humanoid.Health then
+						statuslabel.Text = "Status: Tied"
+					end
+				end
+			end)
+		end)
+		
+		runservice.RenderStepped:connect(function()
+		if Target ~= nil then
+				targetlabel.Text = "Target: "..Target.Name..""
+		else
+		targetlabel.Text = "Target: nil"
+			end
+		end)
+		
+		if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+			local hum = game.Players.LocalPlayer.Character.Humanoid
+			healthlabel.Text = string.format("Health: %d", hum.Health)
+			local con = hum:GetPropertyChangedSignal("Health"):Connect(function()
+				healthlabel.Text = string.format("Health: %d", hum.Health)
+			end)
+		end
+		
+		game.Players.LocalPlayer.CharacterAdded:Connect(function(c)
+			repeat wait() until c:FindFirstChild("Humanoid")
+			local hum = c.Humanoid
+			healthlabel.Text = string.format("Health: %d", hum.Health)
+			local con = hum:GetPropertyChangedSignal("Health"):Connect(function()
+				healthlabel.Text = string.format("Health: %d", hum.Health)
+			end)
+		end)
+		
+		runservice.RenderStepped:connect(function()
+		
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+				if v:IsA("Tool") then
+					if v:FindFirstChild("Ammo") then
+						ammolabel.Text = "Ammo: "..v.Ammo.Value..""
+					elseif not v:FindFirstChildOfClass("Tool") or not v:FindFirstChildWhichIsA("Tool"):FindFirstChild("Ammo") then
+						ammolabel.Text = "Ammo: nil"
+					end
+				end	
+			end
+		end)
+		game.Players.LocalPlayer.Character.ChildRemoved:connect(function(shit)
+		if shit:IsA("Tool") then
+				 ammolabel.Text = "Ammo: nil"
+			end
+		end)
+		runservice.RenderStepped:connect(function()
+			local fps = game.Stats.FrameRateManager.AverageFPS:GetValue()
+			local ping = game.Stats.PerformanceStats.Ping:GetValue()
+			   
+			fpslabel.Text = string.format("FPS: %d",fps)
+			pinglabel.Text = string.format("Ping: %d",ping)
+			 
+		end)
+		
+		
+		
+		
+		
+		
+		
+		
+		local cmdbar = Instance.new("ScreenGui")
+		local bar = Instance.new("Frame")
+		local TextBox = Instance.new("TextBox")
+		
+		cmdbar.Name = "cmdbar"
+		cmdbar.Parent = game.CoreGui
+		
+		bar.Name = "bar"
+		bar.Parent = cmdbar
+		bar.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		bar.BorderSizePixel = 4
+		bar.Position = UDim2.new(-0.00182815362, 0, 0.375446975, 0)
+		bar.Size = UDim2.new(0, 222, 0, 25)
+		bar.Visible = false
+		
+		TextBox.Parent = bar
+		TextBox.BackgroundColor3 = Color3.fromRGB(104,71,141)
+		TextBox.BackgroundTransparency = 1.000
+		TextBox.Position = UDim2.new(0.0135135138, 0, 0, 0)
+		TextBox.Size = UDim2.new(0, 219, 0, 25)
+		TextBox.Font = Enum.Font.Ubuntu
+		TextBox.Text = ""
+		TextBox.TextColor3 = Color3.fromRGB(104,71,141)
+		TextBox.TextSize = 24.000
+		TextBox.TextScaled = true
+		uip.InputBegan:connect(function(keybind,chats)
+			if chats then
+				return
+			end
+		
+			if keybind.KeyCode.Name == "Semicolon" then
+				bar.Visible = true
+				TextBox.Text = ""
+				task.wait(0.1) -- oooooooomggggggggggggggggggg
+				TextBox:CaptureFocus()
+			end
+		end)
+		TextBox.FocusLost:connect(function()
+			if TextBox.Text:sub(1,6) == "shoot " then
+				Target = GetPlayer(TextBox.Text:sub(7))
+				if Target ~= nil then
+					shoottoggle = true
+					makenotif("Started Shooting At "..Target.Name.."")
+					else
+					makenotif("Player Not Found")
+				end
+			elseif TextBox.Text == "rejoin" then
+				game:GetService('TeleportService'):Teleport(game.PlaceId)
+		
+			elseif TextBox.Text == "cmds" then
+			   showcmds() 
+			
+		elseif TextBox.Text == "stopshoot" then
+		  shoottoggle = false
+		  Target = nil
+		  makenotif("Stopped Shooting")
+		elseif TextBox.Text:sub(1,8) == "camlock " then
+		
+			camsettings.locktarget = GetPlayer(TextBox.Text:sub(9))
+			if camsettings.locktarget ~= nil then
+			camsettings.locking = true
+			makenotif("Started Camlocking "..camsettings.locktarget.Name.."")
+			else
+			makenotif("Player Not Found")
+			end
+		elseif TextBox.Text == "uncamlock" then
+			camsettings.locking = false
+			camsettings.locktarget = nil
+			makenotif("Stopped Camlocking")
+		elseif TextBox.Text:sub(1,11) == "blinkspeed " then
+			blinkspeed = TextBox.Text:sub(12)
+		
+			makenotif("Blinkspeed Value Changed To "..blinkspeed.."")
+		elseif TextBox.Text == "noclip" then
+			makenotif("Toggled Noclip")
+			noclip = not noclip
+		elseif TextBox.Text:sub(1,5) == "goto " then
+				
+			tptarget = GetPlayer(TextBox.Text:sub(6))
+			if tptarget ~= nil then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = tptarget.Character.Torso.CFrame
+			makenotif("Teleporting to  "..tptarget.Name.."")
+			tptarget = nil
+			else
+			makenotif("Player Not Found")
+			end
+		elseif TextBox.Text:sub(1,9) == "flyspeed " then
+			flyconfig.speed = TextBox.Text:sub(10)
+			makenotif("Flyspeed Value Changed To "..flyconfig.speed.."")
+		elseif TextBox.Text == "antigh" then
+			antigh = not antigh
+			makenotif("Anti-Groundhit Toggled")
+		elseif TextBox.Text:sub(1,5) == "view " then
+					
+			local viewing = GetPlayer(TextBox.Text:sub(6))
+			if viewing ~= nil then
+			game.workspace.CurrentCamera.CameraSubject = game.Players[tostring(viewing)].Character
+			makenotif("Started Viewing  "..viewing.Name.."")
+			else
+			makenotif("Player Not Found")
+		end
+		elseif TextBox.Text == "unview" then
+			game.workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+		elseif TextBox.Text == "godmode" then
+			makenotif("Instant Respawn Godmode Toggled")
+			comeback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+			Respawn(comeback)
+			godmode = not godmode
+		elseif TextBox.Text == "antiaim" then
+			makenotif("Anti Aim Toggled")
+			antiaimconfig.enabled = not antiaimconfig.enabled
+		elseif TextBox.Text == "noslow" then
+		
+		makenotif("No-Slow Toggled")
+		noslow = not noslow
+		elseif TextBox.Text == "blink" then
+		blink = not blink
+		makenotif("Toggled Blink")
+		
+		end
+		bar.Visible = false
+		end)
+		
+		makenotif("Slappedware Loaded, Made By slapped")) 
+	Stroke.Transparency = transparency
+	Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	return Stroke
+end
+
+function UiLibrary:Create()
+	local DestroyWindowEvents = {}
+	local Utility = {}
+	if CoreGui:FindFirstChild("SlappedWARE") then
+		CoreGui.SlappedWARE:Destroy()
+	end
+
+	local SlappedWARE = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local Title = Instance.new("TextLabel")
+	local TitleHitbox = Instance.new("TextLabel")
+	local Tabs = Instance.new("Frame")
+	local UIListLayout = Instance.new("UIListLayout")
+	local TabItems = Instance.new("ScrollingFrame")
+	local LeftItems = Instance.new("Frame")
+	local RightItems = Instance.new("Frame")
+	local Dragging = false
+	local CurrentXY, MouseDelta = Vector2.new(Mouse.X, Mouse.Y), Vector2.zero
+
+	SlappedWARE.Name = "SlappedWARE"
+	SlappedWARE.Parent = CoreGui
+	SlappedWARE.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	UserInputService.InputBegan:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.RightShift or input.KeyCode == Enum.KeyCode.Insert then
+			SlappedWARE.Enabled = not SlappedWARE.Enabled
+		end
+	end)
+
+	Main.Name = "Main"
+	Main.Parent = SlappedWARE
+	Main.BackgroundColor3 = Color3.new(0.0470588, 0.0470588, 0.0470588)
+	Main.BorderColor3 = Color3.new(0, 0, 0)
+	Main.BorderSizePixel = 0
+	Main.Position = UDim2.new(0.167432696, 0, 0.25790754, 0)
+	Main.Size = UDim2.new(0, 390, 0, 390)
+	Main.ZIndex = 10
+
+	UICorner.Parent = Main
+	Main.Position = UDim2.new(0, Camera.ViewportSize.X / 2, 0, Camera.ViewportSize.Y / 2)
+
+	TitleHitbox.TextTransparency = 1
+	TitleHitbox.BackgroundTransparency = 1
+
+	local Dragging, CurrentXY, MouseDelta
+	local DragOffset = Vector2.new(0, 0) 
+
+	table.insert(DestroyWindowEvents, Title.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Dragging = true
+			CurrentXY = UserInputService:GetMouseLocation()
+
+			DragOffset = Vector2.new(CurrentXY.X - Main.AbsolutePosition.X, CurrentXY.Y - Main.AbsolutePosition.Y)
+		end
+	end))
+
+	table.insert(DestroyWindowEvents, Title.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Dragging = false
+		end
+	end))
+
+	table.insert(DestroyWindowEvents, UserInputService.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement and Dragging then
+			local MousePos = UserInputService:GetMouseLocation()
+			Main.Position = UDim2.new(0, MousePos.X - DragOffset.X, 0, MousePos.Y - DragOffset.Y)
+		end
+	end))
+
+	Title.Name = "Title"
+	Title.Parent = Main
+	Title.AnchorPoint = Vector2.new(0.5, 0)
+	Title.BackgroundColor3 = Color3.new(1, 1, 1)
+	Title.BackgroundTransparency = 1
+	Title.BorderColor3 = Color3.new(0, 0, 0)
+	Title.BorderSizePixel = 0
+	Title.Position = UDim2.new(0.5, 0, 0, 0)
+	Title.Size = UDim2.new(0.939999998, 0, -0.0149999997, 30)
+	Title.Font = Enum.Font.Code
+	Title.Text = "<b>Freezy.<font color=\"rgb(137,182,255)\">vip</font></b>"
+	Title.TextColor3 = Color3.new(1, 1, 1)
+	Title.TextSize = 15
+	Title.TextXAlignment = Enum.TextXAlignment.Left
+	Title.RichText = true
+
+	Tabs.Name = "Tabs"
+	Tabs.Parent = Title
+	Tabs.BackgroundColor3 = Color3.new(0.0745098, 0.0745098, 0.0745098)
+	Tabs.BorderColor3 = Color3.new(0, 0, 0)
+	Tabs.BorderSizePixel = 0
+	Tabs.Position = UDim2.new(0, 0, 1.10000002, 0)
+	Tabs.Size = UDim2.new(1, 0, 1, 0)
+
+	UIListLayout.Parent = Tabs
+	UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(0, 4)
+
+	TabItems.Name = "TabItems"
+	TabItems.Parent = Main
+	TabItems.Active = true
+	TabItems.AnchorPoint = Vector2.new(0.5, 0.5)
+	TabItems.BackgroundColor3 = Color3.new(0.0745098, 0.0745098, 0.0745098)
+	TabItems.BorderColor3 = Color3.new(0, 0, 0)
+	TabItems.BorderSizePixel = 0
+	TabItems.Position = UDim2.new(0.5, 0, 0.560000002, 0)
+	TabItems.Size = UDim2.new(0.939999998, 0, 0.800000012, 0)
+	TabItems.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+	LeftItems.Name = "LeftItems"
+	LeftItems.Parent = TabItems
+	LeftItems.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+	LeftItems.BorderColor3 = Color3.new(0, 0, 0)
+	LeftItems.BorderSizePixel = 0
+	LeftItems.Size = UDim2.new(0.5, 0, 1000, 0)
+	LeftItems.ZIndex = 2
+
+	RightItems.Name = "RightItems"
+	RightItems.Parent = TabItems
+	RightItems.AnchorPoint = Vector2.new(1, 0)
+	RightItems.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+	RightItems.BorderColor3 = Color3.new(0, 0, 0)
+	RightItems.BorderSizePixel = 0
+	RightItems.Position = UDim2.new(1, 0, 0, 0)
+	RightItems.Size = UDim2.new(0.5, 0, 1000, 0)
+	RightItems.ZIndex = 2
+	local FirstTab
+
+	function Utility:AddTab(tabData: {Name: string})
+		local Toggles = {}
+		local Utility = {}
+		Utility.Name = tabData.Name
+
+		local TabButton = Instance.new("TextButton")
+		AddStroke(TabButton, 1, Color3.fromRGB(255, 255, 255), 0.9)
+		TabButton.Name = "TabButton"
+		TabButton.Parent = Tabs
+		TabButton.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+		TabButton.BorderColor3 = Color3.new(0, 0, 0)
+		TabButton.BorderSizePixel = 0
+		TabButton.Font = Enum.Font.Code
+		TabButton.Text = tabData.Name
+		local old = TabButton.TextBounds
+		TabButton.TextColor3 = Color3.new(1, 1, 1)
+		TabButton.TextSize = 14
+
+		TabButton.MouseButton1Click:Connect(function()
+			Utility:Open()
+		end)
+
+		task.spawn(function()
+			local i = 0
+			repeat
+				task.wait()
+				i += 1
+			until i > 100 or TabButton.TextBounds ~= old
+			TabButton.Size = UDim2.new(0, TabButton.TextBounds.X + (#tabData.Name > 10 and 18 or 9), 1, 0)
+		end)
+
+		local function CreateList(_name, parent, tabName)
+			local ListUtility = {}
+			local List = Instance.new("Frame")
+			local UIListLayout = Instance.new("UIListLayout")
+			local ListTitle = Instance.new("TextLabel")
+
+			List.Parent = parent
+			List.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+			List.BackgroundTransparency = 0.4
+			List.Size = UDim2.new(1, 0, 0, 15)
+			List.Visible = false
+			List.BorderSizePixel = 0
+
+			List:SetAttribute("Tab", tabName)
+
+			UIListLayout.Parent = List
+			UIListLayout.FillDirection = Enum.FillDirection.Vertical
+			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Left
+			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout.Padding = UDim.new(0, 1)
+
+			ListTitle.Name = "Title"
+			ListTitle.Parent = List
+			ListTitle.AnchorPoint = Vector2.new(0.5, 0)
+			ListTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+			ListTitle.BackgroundTransparency = 1
+			ListTitle.BorderColor3 = Color3.new(0, 0, 0)
+			ListTitle.BorderSizePixel = 0
+			ListTitle.Position = UDim2.new(0.5, 0, 0, 0)
+			ListTitle.Size = UDim2.new(1, 0, 0, 10)
+			ListTitle.Font = Enum.Font.Code
+			ListTitle.Text = _name
+			ListTitle.TextColor3 = Color3.new(0.756863, 0.756863, 0.756863)
+			ListTitle.TextScaled = true
+			ListTitle.TextXAlignment = Enum.TextXAlignment.Center
+
+			function ListUtility:AddToggle(data: {Name: string, Default: boolean?, Callback: (boolean) -> (), includeKeybind: boolean} --[[toggleName, default, callback, includeKeybind]])
+				local toggleUtils = {}
+				data.Callback = data.Callback or function() end
+				toggleUtils.value = data.Default or false
+				local ToggleButton = Instance.new("TextButton")
+				local Checkbox = Instance.new("Frame")
+				local ToggleTitle = Instance.new("TextLabel")
+				local KeybindButton = Instance.new("TextButton")
+				local UIListLayout = Instance.new("UIListLayout")
+
+				UIListLayout.Parent = ToggleButton
+				UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+				UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+				UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+				UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+				UIListLayout.Padding = UDim.new(0, 1)
+
+				ToggleButton.Name = data.Name
+				ToggleButton.Parent = List
+				ToggleButton.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+				ToggleButton.BorderColor3 = Color3.new(0, 0, 0)
+				ToggleButton.BorderSizePixel = 0
+				ToggleButton.Font = Enum.Font.Code
+				ToggleButton.Text = ""
+				ToggleButton.Size = UDim2.new(0.96, 0, 0, 20)
+
+				AddStroke(Checkbox, 1, Color3.fromRGB(255, 255, 255), 0.9)
+				Checkbox.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+				Checkbox.BorderColor3 = Color3.new(0, 0, 0)
+				Checkbox.BorderSizePixel = 0
+				Checkbox.Parent = ToggleButton
+				Checkbox.Size = UDim2.new(0, 10, 0, 10)
+				Checkbox.Visible = true
+				Checkbox.ZIndex = 2
+
+				ToggleTitle.Name = "Title"
+				ToggleTitle.Parent = ToggleButton
+				ToggleTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+				ToggleTitle.BackgroundTransparency = 1
+				ToggleTitle.BorderColor3 = Color3.new(0, 0, 0)
+				ToggleTitle.BorderSizePixel = 0
+				ToggleTitle.Font = Enum.Font.Code
+				ToggleTitle.Text = " " .. data.Name
+				ToggleTitle.TextColor3 = Color3.new(0.462745, 0.462745, 0.462745)
+				ToggleTitle.TextScaled = false
+				ToggleTitle.TextSize = 13
+				ToggleTitle.Size = UDim2.new(0, 140.774399, 0, 20)
+				ToggleTitle.TextXAlignment = Enum.TextXAlignment.Left
+				ToggleButton.MouseEnter:Connect(function()
+					ToggleTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+				end)
+				ToggleButton.MouseLeave:Connect(function()
+					ToggleTitle.TextColor3 = Color3.new(0.462745, 0.462745, 0.462745)
+				end)
+
+				local selectingKey = false
+
+				local value = false
+				local function toggle()
+					value = not value
+					toggleUtils.value = value
+
+					if value == true then
+						Checkbox.BackgroundColor3 = Color3.fromRGB(65, 105, 225)
+						ToggleTitle.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+					else
+						Checkbox.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+						ToggleTitle.TextColor3 = Color3.new(0.462745, 0.462745, 0.462745)
+					end
+
+					local suc, res = pcall(data.Callback, value)
+					if not suc then
+						warn("Error:", res)
+					end
+				end
+
+				if value == false and data.Default == true then
+					toggle()
+				end
+
+				function toggleUtils:Set(value: boolean)
+					if value == true and toggleUtils.value == false then
+						toggle()
+					elseif value == false and toggleUtils.value == true then
+						toggle()
+					end
+				end
+
+				if data.includeKeybind == true then
+					AddStroke(KeybindButton, 1, Color3.fromRGB(255, 255, 255), 0.9)
+					KeybindButton.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+					KeybindButton.BorderColor3 = Color3.new(0, 0, 0)
+					KeybindButton.BorderSizePixel = 0
+					KeybindButton.Parent = ToggleButton
+					KeybindButton.Size = UDim2.new(0, 10, 0, 10)
+					KeybindButton.Visible = true
+					KeybindButton.ZIndex = 2
+					KeybindButton.TextColor3 = Color3.fromRGB(181, 181, 181)
+					KeybindButton:GetPropertyChangedSignal("TextBounds"):Connect(function()
+						KeybindButton.Size = UDim2.new(0, KeybindButton.TextBounds.X + 5, 1, 0)
+						ToggleTitle.Size = UDim2.new(0, 140.774399 - KeybindButton.TextBounds.X, 0, 20)
+					end)
+					KeybindButton.Text = "key"
+
+					KeybindButton.MouseButton1Click:Connect(function()
+						selectingKey = true
+						KeybindButton.Text = "..."
+						local input = UserInputService.InputBegan:Wait()
+
+						if input.KeyCode == Enum.KeyCode.Unknown then
+							KeybindButton.Text = "key"
+							return
+						end
+
+						KeybindButton.Text = tostring(input.KeyCode):split(".")[3]
+						task.wait(0.1)
+						selectingKey = false
+					end)
+
+					table.insert(DestroyWindowEvents, UserInputService.InputBegan:Connect(function(input, gpe)
+						if not gpe and not selectingKey then
+							if KeybindButton.Text ~= "key" and input.KeyCode == Enum.KeyCode[KeybindButton.Text] then
+								toggle()
+							end
+						end
+					end))
+				else
+					KeybindButton:Destroy()
+				end
+
+				ToggleButton.MouseButton1Click:Connect(toggle)
+
+				List.Size = UDim2.new(List.Size.X.Scale, 0, 0, List.Size.Y.Offset + 20)
+				Toggles[data.Name] = toggleUtils
+				return toggleUtils
+			end
+
+			function ListUtility:AddButton(data: {Name: string, Callback: () -> ()})
+				local ListButton = Instance.new("TextButton")
+				ListButton.Name = buttonName
+				ListButton.Parent = List
+				ListButton.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+				ListButton.BorderColor3 = Color3.new(0, 0, 0)
+				ListButton.BorderSizePixel = 0
+				ListButton.Font = Enum.Font.Code
+				ListButton.Text = data.Name
+				ListButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+				local old = ListButton.TextBounds
+				task.spawn(function()
+					local i = 0
+					repeat
+						i += 1
+						task.wait()
+					until i > 100 or old ~= ListButton.TextBounds
+					ListButton.Size = UDim2.new(0, ListButton.TextBounds.X + 14, 0, 15)
+				end)
+
+				local stroke = AddStroke(ListButton, 1, Color3.fromRGB(255, 255, 255), 0.9)
+
+				ListButton.MouseEnter:Connect(function()
+					stroke.Transparency = 0.6
+				end)
+
+				ListButton.MouseLeave:Connect(function()
+					stroke.Transparency = 0.9
+				end)
+
+				ListButton.MouseButton1Click:Connect(data.Callback)
+
+				List.Size = UDim2.new(List.Size.X.Scale, 0, 0, List.Size.Y.Offset + 15)
+			end
+
+			function ListUtility:AddSlider(sliderData: {Name: string, Minimum: number, Maximum: number, Default: number, Callback: (number) -> ()} --[[sliderName, minValue, maxValue, default, callback]])
+				local callback = sliderData.Callback or function() end
+				local default = sliderData.Default or sliderData.Minimum
+				local maxValue, minValue = sliderData.Maximum or 1, sliderData.Minimum or 0
+				local sliderName = sliderData.Name or "[Undefined]"
+				local sliderHolder = Instance.new("Frame", List)
+				local sliderButton = Instance.new("TextLabel", sliderHolder)
+				local Frame = Instance.new("Frame")
+				local sliderTable = {}
+				sliderTable.value = default
+
+				sliderHolder.BackgroundTransparency = 1
+				sliderHolder.Size = UDim2.new(1, 0, 0, 13)
+
+				Frame.BackgroundColor3 = Color3.fromRGB(65, 105, 225)
+				Frame.Size = UDim2.new(default / maxValue, 0, 1, 0)
+				Frame.Parent = sliderHolder
+				Frame.BorderSizePixel = 0
+				AddStroke(sliderButton, 1, Color3.fromRGB(255, 255, 255), 0.9)
+				sliderButton.Size = UDim2.new(1, 0, 1, 0)
+				sliderButton.Text = string.format("%s: %.2f - %d / %d", sliderName, default, minValue, maxValue)
+				sliderButton.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+				sliderButton.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+				sliderButton.BackgroundTransparency = 1
+				sliderButton.ZIndex = 2
+				sliderButton.Font = Enum.Font.Code
+				sliderButton.TextScaled = true
+				sliderButton.BorderSizePixel = 0
+				sliderHolder.BorderSizePixel = 0
+				local sliding = false 
+
+				local function updateSliderValue()
+					local relativeSize = (Mouse.X - sliderHolder.AbsolutePosition.X) / sliderHolder.AbsoluteSize.X
+					relativeSize = math.clamp(relativeSize, 0, 1)
+					local newValue = minValue + relativeSize * (maxValue - minValue)
+					Frame.Size = UDim2.new(relativeSize, 0, 1, 0)
+					sliderButton.Text = string.format("%s: %.2f - %d / %d", sliderName, newValue, minValue, maxValue)
+					sliderTable.value = newValue
+					if callback then callback(newValue) end
+				end
+
+				sliderButton.MouseEnter:Connect(function()
+					sliderButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+				end)
+
+				sliderButton.MouseLeave:Connect(function()
+					sliderButton.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+				end)
+
+				sliderHolder.InputBegan:Connect(function(ip)
+					if ip.UserInputType ~= Enum.UserInputType.MouseButton1 then return nil end
+					sliding = true
+					updateSliderValue()
+					while sliding do
+						updateSliderValue()
+						task.wait()
+					end
+				end)
+
+				sliderHolder.InputEnded:Connect(function(ip)
+					if ip.UserInputType ~= Enum.UserInputType.MouseButton1 then return nil end
+					sliding = false
+				end)
+
+				List.Size = UDim2.new(List.Size.X.Scale, 0, 0, List.Size.Y.Offset + 13)
+				return sliderTable
+			end
+
+			function ListUtility:AddTextBox(data: {Name: string, Callback: () -> ()})
+				local textBoxTable = {}
+				textBoxTable.value = ""
+				local TextBox = Instance.new("TextBox")
+				TextBox.Size = UDim2.new(1, 0, 0, 15)
+				TextBox.Text = data.Name
+				TextBox.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+				TextBox.TextColor3 = Color3.new(0.462745, 0.462745, 0.462745)
+				TextBox.BackgroundTransparency = 1
+				TextBox.ZIndex = 2
+				TextBox.Parent = List
+				textBoxTable.TextBox = TextBox
+				TextBox.Font = Enum.Font.Code
+				TextBox.PlaceholderText = data.Name
+				TextBox.TextScaled = true
+				TextBox.BorderSizePixel = 0
+
+				TextBox.Focused:Connect(function()
+					TextBox.TextColor3 = Color3.new(0.462745, 0.462745, 0.462745)
+				end)
+
+				TextBox.FocusLost:Connect(function(enterPressed, inputObject)
+					textBoxTable.value = TextBox.Text
+					if textBoxTable.value ~= "" and textBoxTable.value ~= " " then
+						task.spawn(function()
+							local suc, res = pcall(function()
+								return data.Callback(TextBox.Text)
+							end)
+
+							if not suc then
+								warn(string.format("Error while attempting to handle the callback: %s", textBoxTable.value))
+							end
+						end)
+						TextBox.TextColor3 = Color3.new(0.533333, 0.533333, 0.533333)
+					end
+				end)
+
+				List.Size = UDim2.new(List.Size.X.Scale, 0, 0, List.Size.Y.Offset + 15)
+				return textBoxTable
+			end
+
+			function ListUtility:AddDropdown(data: { Name: string, List: {string}, Default: string?, Callback: (string) -> () })
+				local dropdownTable = {}
+				local Title = Instance.new("TextLabel", List)
+				Title.Size = UDim2.new(1, 0, 0, 12)
+				Title.BackgroundTransparency = 1
+				Title.Font = Enum.Font.Code
+				Title.TextColor3 = Color3.fromRGB(199, 199, 199)
+				Title.TextScaled = true
+				Title.BorderSizePixel = 0
+				Title.TextXAlignment = Enum.TextXAlignment.Left
+				Title.Text = string.format(" %s", data.Name)
+				
+				Title.MouseEnter:Connect(function()
+					Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+				end)
+				
+				Title.MouseLeave:Connect(function()
+					Title.TextColor3 = Color3.fromRGB(199, 199, 199)
+				end)
+				
+				local Button = Instance.new("TextButton", Title)
+				Button.Size = UDim2.new(1, 0, 1, 0)
+				Button.TextScaled = true
+				Button.TextColor3 = Color3.fromRGB(199, 199, 199)
+				Button.BackgroundTransparency = 1
+				Button.Text = data.Default or List[1]
+				Button.Font = Enum.Font.Code
+				Button.Position = UDim2.new(0, 0, 1, 0)
+				
+				Button.MouseEnter:Connect(function()
+					Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+				end)
+
+				Button.MouseLeave:Connect(function()
+					Button.TextColor3 = Color3.fromRGB(199, 199, 199)
+				end)
+				
+				List.Size = UDim2.new(List.Size.X.Scale, List.Size.X.Offset, List.Size.Y.Scale, List.Size.Y.Offset + 32)
+				return dropdownTable
+			end
+
+			return ListUtility
+		end
+
+		function Utility:Open()
+			for _, v in next, LeftItems:GetChildren() do
+				if v:GetAttribute("Tab") ~= tabData.Name then
+					v.Visible = false
+				elseif v:GetAttribute("Tab") == tabData.Name then
+					v.Visible = true
+				end
+			end
+			for _, v in next, RightItems:GetChildren() do
+				if v:GetAttribute("Tab") ~= tabData.Name then
+					v.Visible = false
+				elseif v:GetAttribute("Tab") == tabData.Name then
+					v.Visible = true
+				end
+			end
+		end
+
+		if not FirstTab then
+			FirstTab = Utility
+		end
+
+		function Utility:CreateSectionOnSide(name: string, side: "left" | "right")
+			return CreateList(name, side == "left" and LeftItems or RightItems, Utility.Name)
+		end
+
+		return Utility
+	end
+
+	return Utility
+end
+
+local Gui = UiLibrary:Create()
+local Camera = workspace.CurrentCamera
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+local RunService = game:GetService("RunService")
+
+local camlockEnabled = false
+
+local function runFunction(f)
+	xpcall(f, warn)
+end
+
+local CombatTab = Gui:AddTab({ Name = "Combat" })
+local BlatantTab = Gui:AddTab({ Name = "Blatant" })
+local RenderTab = Gui:AddTab({ Name = "Render" })
+local MiscTab = Gui:AddTab({ Name = "Miscellaneous" })
+local Drawing = Drawing or require(game:GetService("ReplicatedStorage"):WaitForChild("ModuleScript"))
+
+function runfunction(f)
+    xpcall(f, warn)
+end
+
+runfunction(function()
+    local Section = CombatTab:CreateSectionOnSide("Camera Lock", "left")
+    local FOVCircle = Drawing.new("Circle")
+    local Target
+    local selectedPart = "HumanoidRootPart"  -- Default selected part
+    local ShakeAmount = 0
+
+    local function getClosestPlayerToCursor()
+        if game:GetService("RunService"):IsStudio() then
+            return {Character = workspace.Dummy}
+        end
+        local closestDist = math.huge
+        local closestPlr = nil
+        for _, v in ipairs(Players:GetPlayers()) do
+            if v ~= LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health > 0 then
+                local screenPos, cameraVisible = Camera:WorldToViewportPoint(v.Character[selectedPart].Position)
+                if cameraVisible then
+                    local distToMouse = (Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y) - Vector2.new(screenPos.X, screenPos.Y)).Magnitude
+                    if distToMouse < closestDist then
+                        closestPlr = v
+                        closestDist = distToMouse
+                    end
+                end
+            end
+        end
+        return closestPlr
+    end
+
+    local Toggle = Section:AddToggle({
+        Name = "Toggle",
+        Default = false,
+        includeKeybind = true,
+        Callback = function(v)
+            Target = v and getClosestPlayerToCursor() or nil
+        end
+    })
+
+    Section:AddToggle({ Name = "FOV Circle", Default = false, Callback = function(value) FOVCircle.Visible = value end })
+    Section:AddSlider({ Name = "FOV Radius", Default = 60, Minimum = 10, Maximum = 600, Callback = function(value) FOVCircle.Radius = value end })
+    local Streamable = Section:AddToggle({ Name = "Streamable", Default = false })
+    local Sensitivity = Section:AddSlider({ Name = "Sensitivity", Default = 0.5, Minimum = 0, Maximum = 1 })
+    local Prediction = Section:AddTextBox({
+        Name = "Prediction",
+        Default = "0.142",
+        Callback = function(value) getgenv().PredictionVelocity = tonumber(value) or 0.142 end
+    })
+    local PredictToggle = Section:AddToggle({ Name = "Predict", Default = false })
+    local KOCheck = Section:AddToggle({ Name = "K.O Check", Default = true })
+    local GrabbedCheck = Section:AddToggle({ Name = "Grabbed Check", Default = true })
+    local Shake = Section:AddSlider({ Name = "Shake", Default = 0, Minimum = 0, Maximum = 3, Callback = function(value) ShakeAmount = value end })
+	Section:AddDropdown({
+		Name = "Aim at limb",
+		List = {"Head", "HumanoidRootPart", "UpperTorso", "LowerTorso"},
+		Default = "HumanoidRootPart",
+		Callback = function(v)
+			selectedPart = v
+		end
+	})
+
+    FOVCircle.Radius = 60
+    FOVCircle.Position = Vector2.new(500, 500)
+    FOVCircle.Visible = false
+    FOVCircle.Color = Color3.fromRGB(255, 255, 255)
+    FOVCircle.Filled = false
+
+    local function updateFOVCirclePosition()
+        if FOVCircle.Visible then
+            local location = UserInputService:GetMouseLocation()
+            FOVCircle.Position = Vector2.new(location.X, location.Y)
+        end
+    end
+
+    local RunService = game:GetService("RunService")
+    local Camera = workspace.CurrentCamera
+
+    RunService.RenderStepped:Connect(function()
+        updateFOVCirclePosition()
+
+        if Target and Target.Character then
+            local Character = Target.Character
+            local partToLockOn = Character:FindFirstChild(selectedPart)
+            local BE = Character:FindFirstChild("BodyEffects")
+            local KO = BE and BE:FindFirstChild("K.O")
+
+            if partToLockOn then
+                -- Check if the velocity is valid
+                local PredictionOffset = PredictToggle.value and partToLockOn:IsA("BasePart") and partToLockOn.Velocity * (getgenv().PredictionVelocity or 0.142) or Vector3.zero
+
+                if KO and KOCheck.value and KO:IsA("BoolValue") and KO.Value then
+                    Toggle:Set(false)
+                    return
+                end
+
+                if GrabbedCheck.value and BE and BE:FindFirstChild("GRABBING_CONSTRAINT") then
+                    Toggle:Set(false)
+                    return
+                end
+
+                local cameraDirection = (partToLockOn.Position + PredictionOffset - Camera.CFrame.Position).Unit
+                local dotProduct = cameraDirection:Dot(Vector3.new(0, 1, 0))
+                if dotProduct < 0.5 then
+                    cameraDirection = cameraDirection:Lerp(Vector3.new(0, 1, 0), 0.5)
+                end
+
+                local currentTime = tick()
+                local shakeIntensity = ShakeAmount * 0.01
+                local shakeX = math.cos(currentTime * 100) * shakeIntensity
+                local shakeY = math.sin(currentTime * 100) * shakeIntensity
+                local shakeOffset = Vector3.new(shakeX, shakeY, 0)
+
+                if Streamable.value then
+                    Camera.CFrame = Camera.CFrame:Lerp(CFrame.new(Camera.CFrame.Position + shakeOffset, partToLockOn.Position + PredictionOffset), Sensitivity.value)
+                else
+                    Camera.CFrame = CFrame.new(Camera.CFrame.Position + shakeOffset, partToLockOn.Position + PredictionOffset)
+                end
+            end
+        end
+    end)
+end)
+
+
+
+
+runfunction(function() -- ESP
+	local Section = RenderTab:CreateSectionOnSide("ESP", "left")
+	local Tracers = {}
+	local TracersToggle = Section:AddToggle({ Name = "Tracers", Default = false, Callback = function(value)
+		if value == false then
+			for _, v in next, Tracers do
+				v:Destroy()
+			end
+		end
+	end})
+
+	Players.PlayerRemoving:Connect(function(plr)
+		if TracersToggle.value == true and Tracers[plr.Name] ~= nil then
+			Tracers[plr.Name]:Destroy()
+			Tracers[plr.Name] = nil
+		end
+	end)
+
+	RunService.RenderStepped:Connect(function(delta)
+		if TracersToggle.value then
+			for _, v in next, Players:GetPlayers() do
+				if v.Character ~= nil and LocalPlayer ~= v then
+					local Character = v.Character
+					local RootPart: BasePart = Character:FindFirstChild("HumanoidRootPart")
+					local Humanoid: Humanoid = Character:FindFirstChildOfClass("Humanoid")
+					if RootPart ~= nil and Humanoid ~= nil and (Humanoid.Health > 1 or Humanoid.Health == 1) then
+						local Position, OnCamera = Camera:WorldToViewportPoint(RootPart.Position)
+						Position = Vector2.new(Position.X, Position.Y)
+						local Tracer = Tracers[v.Name] ~= nil and Tracers[v.Name] or Drawing.new("Line")
+						Tracer.Thickness = 1
+						Tracer.Color = Color3.fromRGB(255, 255, 255)
+						Tracer.From = Vector2.new(Mouse.X, UserInputService:GetMouseLocation().Y)
+						Tracer.To = Position
+						Tracer.Visible = OnCamera
+						Tracers[v.Name] = Tracer
+					end
+				end
+			end
+		else
+			for _, v in next, Tracers do
+				v:Destroy()
+			end
+		end
+	end)
+
+	local ESPBoxes = {}
+	local NameLabels = {}
+	local updating = false
+	local updatingNames = false
+
+	local function updateESP(state)
+		if state then
+			updating = true
+
+			local function addESP(player)
+				if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+					local box = ESPBoxes[player] or Drawing.new("Square")
+					box.Color = Color3.fromRGB(255, 255, 255)
+					box.Thickness = 2
+					box.Transparency = 1
+					box.Filled = false
+					ESPBoxes[player] = box
+				end
+			end
+
+			for _, player in pairs(Players:GetPlayers()) do
+				addESP(player)
+			end
+
+			task.spawn(function()
+				while updating do
+					for player, box in pairs(ESPBoxes) do
+						if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+							local rootPart = player.Character.HumanoidRootPart
+							local screenPos, onScreen = Camera:WorldToViewportPoint(rootPart.Position)
+
+							if onScreen then
+								box.Size = Vector2.new(2000 / screenPos.Z, 3000 / screenPos.Z)
+								box.Position = Vector2.new(screenPos.X - box.Size.X / 2, screenPos.Y - box.Size.Y / 2)
+								box.Visible = true
+							else
+								box.Visible = false
+							end
+						else
+							box.Visible = false
+						end
+					end
+					task.wait(1 / 148)
+				end
+			end)
+
+			Players.PlayerAdded:Connect(function(player)
+				player.CharacterAdded:Connect(function()
+					task.wait(1)
+					addESP(player)
+				end)
+			end)
+
+			Players.PlayerRemoving:Connect(function(player)
+				if ESPBoxes[player] then
+					ESPBoxes[player]:Remove()
+					ESPBoxes[player] = nil
+				end
+			end)
+		else
+			updating = false
+
+			for _, box in pairs(ESPBoxes) do
+				box:Remove()
+			end
+			ESPBoxes = {}
+		end
+	end
+
+	local function updateNames(state)
+		if state then
+			updatingNames = true
+
+			local function addNameLabel(player)
+				if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+					local nameLabel = NameLabels[player] or Drawing.new("Text")
+					nameLabel.Text = player.Name
+					nameLabel.Size = 15
+					nameLabel.Color = Color3.fromRGB(255, 255, 255)
+					nameLabel.Center = true
+					nameLabel.Outline = true
+					NameLabels[player] = nameLabel
+				end
+			end
+
+			for _, player in pairs(Players:GetPlayers()) do
+				addNameLabel(player)
+			end
+
+			task.spawn(function()
+				while updatingNames do
+					for player, nameLabel in pairs(NameLabels) do
+						if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+							local rootPart = player.Character.HumanoidRootPart
+							local headPos, onScreen = Camera:WorldToViewportPoint(rootPart.Position + Vector3.new(0, 3, 0))
+
+							if onScreen then
+								nameLabel.Position = Vector2.new(headPos.X, headPos.Y)
+								nameLabel.Visible = true
+							else
+								nameLabel.Visible = false
+							end
+						else
+							nameLabel.Visible = false
+						end
+					end
+					task.wait(1 / 148)
+				end
+			end)
+
+			Players.PlayerAdded:Connect(function(player)
+				player.CharacterAdded:Connect(function()
+					task.wait(1)
+					addNameLabel(player)
+				end)
+			end)
+
+			Players.PlayerRemoving:Connect(function(player)
+				if NameLabels[player] then
+					NameLabels[player]:Remove()
+					NameLabels[player] = nil
+				end
+			end)
+		else
+			updatingNames = false
+
+			for _, nameLabel in pairs(NameLabels) do
+				nameLabel:Remove()
+			end
+			NameLabels = {}
+		end
+	end
+
+	Section:AddToggle({
+		Name = "Boxes",
+		Default = false,
+		Callback = function(value)
+			updateESP(value)
+		end
+	})
+
+	Section:AddToggle({
+		Name = "Name",
+		Default = false,
+		Callback = function(value)
+			updateNames(value)
+		end
+	})
+end)
+
+local Root, Head, Spoof = nil, nil, false
+local Old
+
+runfunction(function() -- MODS
+	if LocalPlayer.Character ~= nil then
+		Root = LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+		Head = LocalPlayer.Character:WaitForChild("Head")
+	end
+
+	LocalPlayer.CharacterAdded:Connect(function(model)
+		Root = model:WaitForChild("HumanoidRootPart")
+		Head = model.Character:WaitForChild("Head")
+	end)
+	local Position = Root.CFrame
+
+
+	local Section = BlatantTab:CreateSectionOnSide("Character Modifications", "left")
+	local Speed = Section:AddToggle({ Name = "Toggle Speed", Default = false, includeKeybind = true })
+	local Flight = Section:AddToggle({ Name = "Toggle Flight", Default = false, includeKeybind = true })
+
+	local SpeedSlider = Section:AddSlider({ Name = "Horizontal Speed", Minimum = 1, Maximum = 600, Default = 50 })
+	local VerticalSpeedSlider = Section:AddSlider({ Name = "Vertical Speed", Minimum = 1, Maximum = 600, Default = 50 })
+	local FakeLag = Section:AddToggle({ Name = "Fake Lag Desync", Default = false, includeKeybind = true })
+	
+	task.spawn(function()
+		while task.wait(0.22) do
+			Position = Root.CFrame
+		end
+	end)
+	
+	RunService.Heartbeat:Connect(function(dt)
+		if FakeLag.value == true then
+			local Old = Root.CFrame
+			Root.CFrame = Position
+			RunService.RenderStepped:Wait()
+			Root.CFrame = Old
+		end
+	end)
+	
+	RunService.RenderStepped:Connect(function(dt)
+		local Character = LocalPlayer.Character
+		if Character == nil then return nil end
+		if Speed.value == true and Flight.value == false then
+			Character:PivotTo(Character:GetPivot() + (Character:FindFirstChildOfClass("Humanoid").MoveDirection * SpeedSlider.value) * dt)
+		else
+			if Flight.value == true then
+				if UserInputService:IsKeyDown(Enum.KeyCode.Space) and not UserInputService:GetFocusedTextBox() then
+					Root.CFrame = Root.CFrame + Vector3.new(0, VerticalSpeedSlider.value * dt, 0)
+				end
+				if UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) and not UserInputService:GetFocusedTextBox() then
+					Root.CFrame = Root.CFrame - Vector3.new(0, VerticalSpeedSlider.value * dt, 0)
+				end
+				Root.Velocity, Head.Velocity = Vector3.zero, Vector3.zero
+				Root.CFrame = Root.CFrame + Character:FindFirstChildOfClass("Humanoid").MoveDirection * (SpeedSlider.value * dt)
+			end
+		end
+	end)
+	
+	local old
+	old = hookmetamethod(game, "__index", newcclosure(function(self, property)
+		if (self == Head or self == Root and property == "CFrame") and not checkcaller() and FakeLag.value == true then
+			return Position
+		end
+		return old(self, property)
+	end))
+end)
+
+	local Section = BlatantTab:CreateSectionOnSide("Silent Aim", "right")
+end
+
+local lplr = game:GetService("Players").LocalPlayer
+local shotty = lplr:WaitForChild("Backpack"):WaitForChild("Shotty")
+local plr = game:GetService('Players').LocalPlayer
+shotty.Handle.Material = ("Granite")
+--shotty.Handle.Transparency = 0
+--shotty.Clip.Transparency = 0
+--shotty.Heh.Transparency = 0
+--shotty.Barrel.Transparency = 0
+--shotty.Union.Transparency = 0
+shotty.Heh.Material = ("Granite")
+shotty.Clip.Material = ("Granite")
+shotty.Barrel.Material = ("Granite")
+shotty.Barrel.BrickColor = BrickColor.new("Royal purple")
+shotty.Clip.BrickColor = BrickColor.new("Royal purple")
+shotty.Handle.BrickColor = BrickColor.new("Royal purple")
+shotty.Heh.BrickColor = BrickColor.new("Royal purple")
+shotty.Union.BrickColor = BrickColor.new("Royal purple")
+shotty.Union.Material = ("Granite")
+wait(0.001)
+local Unions ={}for i,v in pairs(shotty:GetChildren())do if v.Name=="Union"then table.insert(Unions,v)end end
+for i,Union in pairs(Unions)do  
+Union.BrickColor = BrickColor.new("Royal purple")
+Union.Material = "Granite"
+Union.UsePartColor = true
+end
+
+local lplr = game:GetService("Players").LocalPlayer
+local glock = lplr:WaitForChild("Backpack"):WaitForChild("Glock")
+local plr = game:GetService('Players').LocalPlayer
+glock.Handle.Material = ("Granite")
+--glock.Handle.Transparency = 0
+--glock.Clip.Transparency = 0
+--glock.Heh.Transparency = 0
+--glock.Barrel.Transparency = 0
+--glock.Union.Transparency = 0
+glock.Heh.Material = ("Granite")
+glock.Barrel.Material = ("Granite")
+glock.Barrel.BrickColor = BrickColor.new("Royal purple")
+glock.Handle.BrickColor = BrickColor.new("Royal purple")
+glock.Heh.BrickColor = BrickColor.new("Royal purple")
+glock.Union.BrickColor = BrickColor.new("Royal purple")
+glock.Union.Material = ("Granite")
+wait(0.001)
+local Unions ={}for i,v in pairs(glock:GetChildren())do if v.Name=="Union"then table.insert(Unions,v)end end
+for i,Union in pairs(Unions)do  
+Union.BrickColor = BrickColor.new("Royal purple")
+Union.Material = "ForceField"
+Union.UsePartColor = true
+end
+
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(c)
+   local lplr = game:GetService("Players").LocalPlayer
+local shotty = lplr:WaitForChild("Backpack"):WaitForChild("Shotty")
+local plr = game:GetService('Players').LocalPlayer
+shotty.Handle.Material = ("Granite")
+--shotty.Handle.Transparency = 0
+--shotty.Clip.Transparency = 0
+--shotty.Heh.Transparency = 0
+--shotty.Barrel.Transparency = 0
+--shotty.Union.Transparency = 0
+shotty.Heh.Material = ("Granite")
+shotty.Clip.Material = ("Granite")
+shotty.Barrel.Material = ("Granite")
+shotty.Barrel.BrickColor = BrickColor.new("Royal purple")
+shotty.Clip.BrickColor = BrickColor.new("Royal purple")
+shotty.Handle.BrickColor = BrickColor.new("Royal purple")
+shotty.Heh.BrickColor = BrickColor.new("Royal purple")
+shotty.Union.BrickColor = BrickColor.new("Royal purple")
+shotty.Union.Material = ("Granite")
+wait(0.001)
+local Unions ={}for i,v in pairs(shotty:GetChildren())do if v.Name=="Union"then table.insert(Unions,v)end end
+for i,Union in pairs(Unions)do  
+Union.BrickColor = BrickColor.new("Royal purple")
+Union.Material = "Granite"
+Union.UsePartColor = true
+end
+
+local lplr = game:GetService("Players").LocalPlayer
+local glock = lplr:WaitForChild("Backpack"):WaitForChild("Glock")
+local plr = game:GetService('Players').LocalPlayer
+glock.Handle.Material = ("Granite")
+--glock.Handle.Transparency = 0
+--glock.Clip.Transparency = 0
+--glock.Heh.Transparency = 0
+--glock.Barrel.Transparency = 0
+--glock.Union.Transparency = 0
+glock.Heh.Material = ("Granite")
+glock.Barrel.Material = ("Granite")
+glock.Barrel.BrickColor = BrickColor.new("Lime green")
+glock.Handle.BrickColor = BrickColor.new("Lime green")
+glock.Heh.BrickColor = BrickColor.new("Lime green")
+glock.Union.BrickColor = BrickColor.new("Lime green")
+glock.Union.Material = ("Granite")
+wait(0.001)
+local Unions ={}for i,v in pairs(glock:GetChildren())do if v.Name=="Union"then table.insert(Unions,v)end end
+for i,Union in pairs(Unions)do  
+Union.BrickColor = BrickColor.new("Lime green")
+Union.Material = "ForceField"
+Union.UsePartColor = true
+end
+end)
+notif("slapped on top\ntook ".. string.format("%.6f",tick()-Tick) .. " seconds to load\n(fixed by Scooter)", 2)
+end
